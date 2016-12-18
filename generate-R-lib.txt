@@ -1,0 +1,8 @@
+"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\vsvars32.bat"
+
+dumpbin /exports "C:\Program Files\R\R-3.3.2\bin\x64\R.dll" /out:R.def
+
+edit R.def accordint to https://adrianhenke.wordpress.com/2008/12/05/create-lib-file-from-dll/
+
+lib /def:R.def /out:R.lib /machine:x64
+
